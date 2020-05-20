@@ -25,7 +25,7 @@ transform=[[0.613184582341,-0.62131857213],[-0.48249131254,0.8147171823192]]
 X_aniso=np.dot(X,transform)
 y_pred=KMeans(n_clusters=3,random_state=random_state).fit_predict(X_aniso)
 plt.subplot(222)
-plt.scatter(X[:,0],X[:,1],c=y_pred)
+plt.scatter(X_aniso[:,0],X_aniso[:,1],c=y_pred)
 plt.title('Anisotropicly Distributed Blobs')
 
 #3. Unequal Variance
